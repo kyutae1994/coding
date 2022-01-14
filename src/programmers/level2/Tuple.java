@@ -18,12 +18,13 @@ public class Tuple {
         s = s.substring(1, s.length() - 1).replace("},{", ".");
         s = s.substring(1, s.length() - 1);
         String[] str = s.split("\\.");
-        Arrays.sort(str, new Comparator<String>() {
-            @Override
-            public int compare(String o1, String o2) {
-                return o1.length() - o2.length();
-            }
-        });
+//        Arrays.sort(str, new Comparator<String>() {
+//            @Override
+//            public int compare(String o1, String o2) {
+//                return o1.length() - o2.length();
+//            }
+//        });
+        Arrays.sort(str, (o1, o2) -> o1.length() - o2.length());
         List<Integer> list = new ArrayList<>();
         for (int i = 0; i < str.length; i++) {
             String[] temp = str[i].split(",");
