@@ -1,14 +1,11 @@
 package programmers.level2;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.TreeSet;
+import java.util.*;
 
 public class FindingThePrimeNumber {
     public static void main(String[] args) {
-        System.out.println(solution("17"));
-        System.out.println(solution("011"));
+//        System.out.println(solution("17"));
+//        System.out.println(solution("011"));
         System.out.println(solution("41"));
     }
 
@@ -16,6 +13,7 @@ public class FindingThePrimeNumber {
 
         HashSet<Integer> set = new HashSet<>();
         permutation("", numbers, set);
+        System.out.println(set);
         int count = 0;
         while (set.iterator().hasNext()) {
             int a = set.iterator().next();
