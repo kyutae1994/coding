@@ -15,7 +15,6 @@ public class MakingAStarAtTheIntersection {
         String[] answer = {};
         List<Point> list = new ArrayList<>();
 
-        long x, y;
         for (int i = 0; i < line.length - 1; i++) {
             long a = line[i][0];
             long b = line[i][1];
@@ -34,8 +33,8 @@ public class MakingAStarAtTheIntersection {
                 long ecaf = e * c - a * f;
                 if (ecaf % adbc != 0) continue;
 
-                x = bfed / adbc;
-                y = ecaf / adbc;
+                long x = bfed / adbc;
+                long y = ecaf / adbc;
                 list.add(new Point(x, y));
 
                 minx = Math.min(minx, x);
@@ -45,9 +44,9 @@ public class MakingAStarAtTheIntersection {
             }
         }
 
-        long height = maxy - miny + 1;
-        long width = maxx - minx + 1;
-        answer = new String[(int) height];
+        int width = (int) (maxx - minx) + 1;
+        int height = (int) (maxy - miny) + 1;
+        answer = new String[height];
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < width; i++) {
             sb.append('.');
@@ -55,11 +54,12 @@ public class MakingAStarAtTheIntersection {
         Arrays.fill(answer, sb.toString());
 
         for (int i = 0; i < list.size(); i++) {
-            Point p = list.get(i);
-            int rx = (int) (p.x - minx);
-            int ry = (int) (p.y - miny);
-            System.out.println(rx + " " + ry);
-            answer[(int)height - 1 - ry] = answer[(int)height - 1 - ry].substring(0, rx) + "*" + answer[(int)height - 1 - ry].substring(rx + 1, (int) width);
+            int x = (int) (list.get(i).x - minx);
+            int y = (int) (list.get(i).y - miny);
+
+            System.out.println(x + " " + y);
+
+            answer[height - y - 1] = answer[height - y - 1].substring(0, x) + "*" + answer[height - y - 1].substring(x + 1, width);
         }
 
         return answer;
