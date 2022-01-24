@@ -2,7 +2,7 @@ package programmers.level2;
 
 import java.util.*;
 
-public class DivideThePowerGridIntoTwo {    // 3페이지 / 전령망을 둘로 나누기
+public class DivideThePowerGridIntoTwo {    // 3페이지 & 전령망을 둘로 나누기
     public static void main(String[] args) {
         int[][] wires = {{1,3},{2,3},{3,4},{4,5},{4,6},{4,7},{7,8},{7,9}};
         System.out.println(solution(9, wires));
