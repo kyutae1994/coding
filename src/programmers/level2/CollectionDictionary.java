@@ -1,7 +1,7 @@
 package programmers.level2;
 
 public class CollectionDictionary {
-    public static void main(String[] args) {
+    public static void main(String[] args) { // 3페이지 & 모음사전
         System.out.println(solution("AAAE"));
     }
     public static int solution(String word) {
