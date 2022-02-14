@@ -2,7 +2,7 @@ package programmers.level2;
 
 import java.util.*;
 
-public class minAndMax {
+public class minAndMax { // 4페이지 & 최댓값과 최솟값
     public static void main(String[] args) {
         System.out.println(solution("-1 -2 -3 -4"));
     }
