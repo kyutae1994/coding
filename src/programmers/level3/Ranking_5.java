@@ -1,4 +1,4 @@
-package programmers.level3.right.page1;
+package programmers.level3;
 
 public class Ranking_5 {
     public int solution(int n, int[][] results) {

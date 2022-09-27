@@ -1,4 +1,4 @@
-package programmers.level3.left.page1;
+package programmers.level3;
 
 public class NetWork_5 {
     public static void main(String[] args) {

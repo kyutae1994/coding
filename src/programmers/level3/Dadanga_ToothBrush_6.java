@@ -1,4 +1,4 @@
-package programmers.level3.left.page1;
+package programmers.level3;
 
 import java.util.Arrays;
 import java.util.HashMap;
