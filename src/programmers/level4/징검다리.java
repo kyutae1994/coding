@@ -21,13 +21,19 @@ public class 징검다리 {
             for (int i = 0; i < rocks.length; i++) {
                 if (rocks[i] - prev < mid) {
                     count++;
+                    if (count > n) {
+                        break;
+                    }
                 } else {
                     prev = rocks[i];
                 }
-                if (count == 2)
-                    break;
             }
-//            if (distance - prev < mid && count)
+            if (count <= n) {
+                answer = mid > answer ? mid : answer;
+                start = mid + 1;
+            } else {
+                end = mid - 1;
+            }
         }
         return answer;
     }
